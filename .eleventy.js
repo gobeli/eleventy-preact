@@ -4,7 +4,7 @@ const { render } = require('preact-render-to-string');
 const fs = require('fs-extra');
 
 module.exports = function (config) {
-  fs.ensureDirSync('./_js')
+  fs.ensureDirSync('./_js');
 
   config.setUseGitIgnore(false);
 
@@ -22,7 +22,7 @@ module.exports = function (config) {
       input: '_js/content',
       output: 'dist',
       includes: '../_includes',
-      layouts: '../layouts'
+      layouts: '../layouts',
     },
   };
 };

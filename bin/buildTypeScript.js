@@ -3,9 +3,8 @@ const glob = require('tiny-glob/sync');
 const fs = require('fs-extra');
 
 const buildTypeScript = () => {
+  fs.copySync('./src/content', './_js/content', { overwrite: true });
   const entryPoints = glob('./src/**/*.tsx');
-
-  fs.copySync('./src/content', './_js/content', { overwrite: true })
 
   buildSync({
     entryPoints,
@@ -15,6 +14,6 @@ const buildTypeScript = () => {
     format: 'cjs',
     platform: 'node',
   });
-}
+};
 
 module.exports = buildTypeScript;

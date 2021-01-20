@@ -1,3 +1,3 @@
-const buildTypeScript = require('./buildTypscript');
+const buildTypeScript = require('./buildTypeScript');
 
 buildTypeScript();

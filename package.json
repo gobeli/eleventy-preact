@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node bin/build.js && eleventy",
+    "clean": "rm -rf dist/ _js/",
+    "build:ts": "node bin/build.js",
+    "build:eleventy": "eleventy",
+    "build": "npm-run-all --sequential clean build:ts build:eleventy",
     "watch:ts": "node bin/watch.js",
     "watch:eleventy": "eleventy --serve",
-    "watch": "npm-run-all --parallel watch:*"
+    "watch": "npm-run-all clean --parallel watch:*"
   },
   "author": "",
   "license": "ISC",
@@ -19,6 +22,7 @@
     "npm-run-all": "^4.1.5",
     "preact": "^10.5.10",
     "preact-render-to-string": "^5.1.12",
+    "prettier": "^2.2.1",
     "tiny-glob": "^0.2.8"
   }
 }
