@@ -1,0 +1,18 @@
+backend:
+  name: github
+  repo: gobeli/eleventy-preact
+media_folder: static
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - label: 'Home Page'
+        name: home
+        file: src/content/home.md
+        fields:
+          - { label: Layout, name: layout, widget: hidden, default: home }
+          - { label: Permalink, name: permalink, widget: hidden, default: index.html }
+          - { label: Title, name: title, widget: string }
+          - { label: Intro, name: intro, widget: markdown }
+          - { label: Body, name: body, widget: markdown }
+          - { label: Photo, name: photo, widget: image }

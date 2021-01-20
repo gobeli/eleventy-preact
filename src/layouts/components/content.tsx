@@ -1,5 +1,7 @@
-import { RenderableProps, h, isValidElement } from 'preact';
+import { RenderableProps, h as ph, isValidElement } from 'preact';
 import { EleventyProps } from '../../interfaces/eleventyProps';
+
+const h = (globalThis as any).h ?? ph;
 
 export const Content = ({
   content,
@@ -13,7 +15,7 @@ export const Content = ({
         isPreactElement ? undefined : { __html: content?.toString() ?? '' }
       }
     >
-      {children ? children : isPreactElement ? content : ''}
+      {children ? children : isPreactElement ? content : null}
     </div>
   );
 };
