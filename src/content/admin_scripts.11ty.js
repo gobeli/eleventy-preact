@@ -10,7 +10,7 @@ module.exports = class Scripts {
   }
 
   async render () {
-    const entryPoint = join(process.cwd(), 'src', 'client', 'admin.tsx');
+    const entryPoint = join(process.cwd(), 'src', 'client', 'js', 'admin.tsx');
     return buildClient(entryPoint);
   }
 }

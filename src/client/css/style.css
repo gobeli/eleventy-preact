@@ -1,0 +1,8 @@
+@import 'modern-normalize/modern-normalize.css';
+@import 'base.css';
+
+.content {
+  max-width: 768px;
+  margin: 0 auto;
+  padding: var(--spacing-4);
+}

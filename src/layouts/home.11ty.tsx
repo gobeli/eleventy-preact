@@ -5,6 +5,9 @@ import type { EleventyProps } from '../interfaces/eleventyProps';
 
 import { Content } from './components/content';
 
+// Use parent layout as component, to ensure the preview works
+import { render as Base } from './base.11ty';
+
 export interface HomeProps extends EleventyProps {
   intro: string;
   title: string;
@@ -14,11 +17,12 @@ export interface HomeProps extends EleventyProps {
 export const render = ({
   content,
   children,
+  title
 }: RenderableProps<HomeProps>) => (
-  <Fragment>
-    <h1>Home yeah boyyy</h1>
+  <Base>
+    <h1>{title}</h1>
     <Content content={content}>{children}</Content>
-  </Fragment>
+  </Base>
 );
 
 export const data = () => ({

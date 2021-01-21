@@ -8,11 +8,10 @@ export const Content = ({
   children,
 }: RenderableProps<EleventyProps>) => {
   const isPreactElement = isValidElement(content);
-
   return (
     <div
       dangerouslySetInnerHTML={
-        isPreactElement ? undefined : { __html: content?.toString() ?? '' }
+        (isPreactElement || !content) ? undefined : { __html: content?.toString() ?? '' }
       }
     >
       {children ? children : isPreactElement ? content : null}

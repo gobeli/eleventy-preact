@@ -1,7 +1,7 @@
-import { render as Home } from '../layouts/home.11ty';
+import { render as Home } from '../../layouts/home.11ty';
 import markdownIt from 'markdown-it';
 
-import { h } from '../util/h';
+import { h } from '../../util/h';
 
 const md = markdownIt();
 

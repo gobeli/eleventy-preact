@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf dist/ _js/",
-    "build:eleventy": "ELEVENTY_ENV=prod ELEVENTY_EXPERIMENTAL=true eleventy",
+    "build:eleventy": "env ELEVENTY_ENV=prod ELEVENTY_EXPERIMENTAL=true eleventy",
     "build": "npm-run-all --sequential clean build:eleventy",
-    "dev": "ELEVENTY_EXPERIMENTAL=true eleventy --serve",
+    "dev": "env ELEVENTY_EXPERIMENTAL=true eleventy --serve",
     "start": "npm run dev"
   },
   "author": "",
@@ -17,10 +17,14 @@
     "@types/markdown-it": "^12.0.1",
     "@types/node": "^14.14.22",
     "@types/react": "^17.0.0",
+    "autoprefixer": "^10.2.3",
     "chokidar": "^3.5.1",
     "esbuild": "^0.8.32",
     "fs-extra": "^9.1.0",
     "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.4",
+    "postcss-import": "^14.0.0",
+    "postcss-nesting": "^7.0.1",
     "preact": "^10.5.10",
     "preact-render-to-string": "^5.1.12",
     "prettier": "^2.2.1",
@@ -28,6 +32,13 @@
   },
   "dependencies": {
     "markdown-it": "^12.0.4",
+    "modern-normalize": "^1.0.0",
     "punycode": "^2.1.1"
+  },
+  "postcss": {
+    "plugins": {
+      "tailwindcss": {},
+      "autoprefixer": {}
+    }
   }
 }
