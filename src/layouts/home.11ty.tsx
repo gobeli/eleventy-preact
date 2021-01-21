@@ -1,5 +1,8 @@
-import { Fragment, h as ph, RenderableProps } from 'preact';
-import { EleventyProps } from '../interfaces/eleventyProps';
+import { Fragment, RenderableProps } from 'preact';
+import { h } from '../util/h';
+
+import type { EleventyProps } from '../interfaces/eleventyProps';
+
 import { Content } from './components/content';
 
 export interface HomeProps extends EleventyProps {
@@ -8,14 +11,12 @@ export interface HomeProps extends EleventyProps {
   photo: string;
 }
 
-const h = (globalThis as any).h ?? ph;
-
 export const render = ({
   content,
   children,
 }: RenderableProps<HomeProps>) => (
   <Fragment>
-    <h1>Home LAYOUT</h1>
+    <h1>Home yeah boyyy</h1>
     <Content content={content}>{children}</Content>
   </Fragment>
 );

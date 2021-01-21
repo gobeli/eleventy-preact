@@ -1,7 +1,7 @@
-import { RenderableProps, h as ph, isValidElement } from 'preact';
-import { EleventyProps } from '../../interfaces/eleventyProps';
+import { RenderableProps, isValidElement } from 'preact';
+import { h } from '../../util/h';
 
-const h = (globalThis as any).h ?? ph;
+import type { EleventyProps } from '../../interfaces/eleventyProps';
 
 export const Content = ({
   content,

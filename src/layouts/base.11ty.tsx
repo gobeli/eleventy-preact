@@ -1,6 +1,8 @@
-import { h, isValidElement, RenderableProps } from 'preact';
+import { RenderableProps } from 'preact';
+import { h } from '../util/h';
 
 import type { EleventyProps } from '../interfaces/eleventyProps';
+
 import { Content } from './components/content';
 
 export const render = ({
