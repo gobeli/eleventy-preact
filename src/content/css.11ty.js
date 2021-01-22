@@ -16,7 +16,7 @@ module.exports = class Scripts {
 
     const processed = await postcss([
       require('postcss-import'),
-      require('postcss-nesting'),
+      require('postcss-nested'),
       require('autoprefixer')
     ])
       .process(css,  { from: 'src/client/css/style.css', to: 'dist/style.css' })

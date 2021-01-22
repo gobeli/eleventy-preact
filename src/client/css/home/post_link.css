@@ -1,0 +1,28 @@
+.post-links {
+  padding: var(--spacing-4) 0;
+}
+
+.post-link {
+  padding: var(--spacing-8) 0;
+  font-size: var(--text-lg);
+
+  & + & {
+    position: relative;
+    border-top: 1px solid var(--white);
+  }
+
+  &__title {
+    a {
+      text-decoration: none;
+      color: inherit;
+      &:hover {
+        color: var(--primary);
+      }
+    }
+  }
+
+
+  &__date {
+    font-size: var(--text-sm);
+  }
+}

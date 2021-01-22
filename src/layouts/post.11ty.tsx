@@ -7,10 +7,8 @@ import { Content } from './shared/content';
 
 // Use parent layout as component, to ensure the preview works
 import { render as Base } from './base.11ty';
-import { PostLink } from './home/post_link';
 
-export interface HomeProps extends EleventyProps {
-  intro: string;
+export interface PostProps extends EleventyProps {
   title: string;
   photo: string;
 }
@@ -18,15 +16,10 @@ export interface HomeProps extends EleventyProps {
 export const render = ({
   content,
   children,
-  collections,
   title
-}: RenderableProps<HomeProps>) => (
+}: RenderableProps<PostProps>) => (
   <Base>
     <h1>{title}</h1>
     <Content content={content}>{children}</Content>
-    <h2>Blog Posts</h2>
-    <div className="post-links">
-      {collections.posts.map(PostLink)}
-    </div>
   </Base>
 );

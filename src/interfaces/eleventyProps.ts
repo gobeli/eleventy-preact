@@ -8,11 +8,11 @@ export interface Page {
 }
 
 export interface EleventyProps {
-  pkg?: Object;
+  pkg?: any;
   permalink?: string;
   layout?: string;
   page?: Page;
-  collections?: Object;
+  collections?: any;
   content?: string | Object;
   [key: string]: any;
 }

@@ -3,7 +3,7 @@ import { h } from '../util/h';
 
 import type { EleventyProps } from '../interfaces/eleventyProps';
 
-import { Content } from './components/content';
+import { Content } from './shared/content';
 
 export const render = ({
   content,

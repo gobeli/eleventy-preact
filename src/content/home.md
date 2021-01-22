@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: home.11ty.tsx
 permalink: index.html
 title: A Title
 intro: Hello hello *bla*

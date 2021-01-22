@@ -16,3 +16,12 @@ collections:
           - { label: Intro, name: intro, widget: markdown }
           - { label: Body, name: body, widget: markdown }
           - { label: Photo, name: photo, widget: image }
+  - name: posts
+    label: Posts
+    folder: src/content/posts
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - { label: Layout, name: layout, widget: hidden, default: post.11ty.tsx }
+      - { label: Title, name: title, widget: string }
+      - { label: Body, name: body, widget: markdown }
