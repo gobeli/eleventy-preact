@@ -15,7 +15,6 @@ function getData ({ entry }: any) {
 
 CMS.registerPreviewTemplate('home', (props: any) => {
   const data = getData(props);
-  data.intro = md.render(data.intro);
   data.collections = (window as any).__COLLECTIONS__;
 
   return (
