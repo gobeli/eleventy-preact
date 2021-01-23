@@ -13,9 +13,8 @@ collections:
           - { label: Layout, name: layout, widget: hidden, default: home }
           - { label: Permalink, name: permalink, widget: hidden, default: index.html }
           - { label: Title, name: title, widget: string }
-          - { label: Intro, name: intro, widget: markdown }
+          - { label: Photo, name: logo, widget: image }
           - { label: Body, name: body, widget: markdown }
-          - { label: Photo, name: photo, widget: image }
   - name: posts
     label: Posts
     folder: src/content/posts
@@ -24,4 +23,6 @@ collections:
     fields:
       - { label: Layout, name: layout, widget: hidden, default: post.11ty.tsx }
       - { label: Title, name: title, widget: string }
+      - { label: Description, name: description, widget: string }
+      - { label: Date, name: date, widget: date }
       - { label: Body, name: body, widget: markdown }

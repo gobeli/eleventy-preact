@@ -2,10 +2,9 @@
 layout: home.11ty.tsx
 permalink: index.html
 title: A Title
-intro: Hello hello *bla*
-photo: https://www.11ty.dev/img/possum-balloon-original-sm.png
+logo: https://www.11ty.dev/img/possum-balloon-original-sm.png
 ---
 
-# Hello World
+## Intro to my site
 
 bla bla bla

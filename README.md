@@ -4,5 +4,6 @@ A Eleventy template using preact to create template, and Netlify CMS to edit con
 
 ## Features
 * Preact Components as 11ty content and layouts
+* Typescript
 * Netlify CMS with previews
 * Styling built with postcss

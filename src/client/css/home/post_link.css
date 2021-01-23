@@ -1,13 +1,8 @@
-.post-links {
-  padding: var(--spacing-4) 0;
-}
-
 .post-link {
   padding: var(--spacing-8) 0;
-  font-size: var(--text-lg);
+  font-size: var(--text-md);
 
   & + & {
-    position: relative;
     border-top: 1px solid var(--white);
   }
 

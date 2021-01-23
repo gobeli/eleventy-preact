@@ -1,10 +1,10 @@
 @import 'modern-normalize/modern-normalize.css';
 @import 'base.css';
 
-@import 'home/post_link';
+@import 'home/home';
 
 .content {
   max-width: 768px;
   margin: 0 auto;
-  padding: var(--spacing-4);
+  padding: 0 var(--spacing-4);
 }

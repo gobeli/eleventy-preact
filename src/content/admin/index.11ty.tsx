@@ -7,7 +7,9 @@ import { h } from '../../util/h';
 export const render = ({ collections }: RenderableProps<EleventyProps>) => {
   const posts = collections.posts.map((p: any) => ({
     data: {
-      title: p.data.title
+      title: p.data.title,
+      description: p.data.description,
+      date: p.data.date
     },
     url: p.url,
     templateContent: p.templateContent

@@ -13,17 +13,24 @@ export interface HomeProps extends EleventyProps {
   intro: string;
   title: string;
   photo: string;
+  logo: string;
 }
 
 export const render = ({
   content,
   children,
   collections,
-  title
+  title,
+  logo
 }: RenderableProps<HomeProps>) => (
   <Base>
-    <h1>{title}</h1>
-    <Content content={content}>{children}</Content>
+    <div className="home-logo">
+      <img src={logo} alt="Logo" height="150px" />
+    </div>
+    <h1 className="home-title">{title}</h1>
+    <div className="home-intro">
+     <Content content={content}>{children}</Content>
+    </div>
     <h2>Blog Posts</h2>
     <div className="post-links">
       {collections.posts.map(PostLink)}

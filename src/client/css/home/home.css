@@ -1,0 +1,25 @@
+@import 'post_link';
+
+.home-logo {
+  padding-top: var(--spacing-4);
+  text-align: right;
+  img {
+    transition: all .2s;
+    &:hover {
+      transform: translate(20px, -20px) rotate(5deg);
+    }
+  }
+}
+
+.home-title {
+  font-size: clamp(var(--text-2xl), 5vw, var(--text-4xl));
+  font-family: var(--font-serif);
+  margin: var(--spacing-20) 0;
+  text-align: center;
+}
+
+.home-intro {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: var(--spacing-4);
+  margin: var(--spacing-12) 0;
+}
